@@ -21,8 +21,8 @@ class1::class1()
 
 member::member()
 {
-	loc++;
 	location = loc;
+	loc++;
 	return;
 }
 
