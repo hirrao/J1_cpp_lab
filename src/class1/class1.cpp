@@ -43,7 +43,7 @@ int class1::ThrowOut()
 		}
 		else
 		{
-			C.erase(C.begin() + class1::thrownum%size);
+			C.erase(C.begin() + (class1::thrownum+1)%size);
 		}
 	}
 }
