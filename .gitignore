@@ -1,5 +1,3 @@
-/Debug
-/.vs
-/.Release
-/x64
-/x86
+/build
+/bin
+/lib
