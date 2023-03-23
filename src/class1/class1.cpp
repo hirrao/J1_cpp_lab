@@ -36,7 +36,7 @@ int class1::ThrowOut()
 	while (1)
 	{
 		vector<member> &C = class1::circle;
-		int size = C.size();
+		size_t size = C.size();
 		if (size == 1)
 		{
 			return C[0].GetLocation();
