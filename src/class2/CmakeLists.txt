@@ -1,8 +1,8 @@
-aux_source_directory(. DLL)
-add_library(DLL SHARED ${DLL})
-SET_TARGET_PROPERTIES(DLL PROPERTIES LINKER_LANGUAGE CXX
+aux_source_directory(. dll2)
+add_library(dll2 SHARED ${dll2})
+SET_TARGET_PROPERTIES(dll2 PROPERTIES LINKER_LANGUAGE CXX
         RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin
         LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib
-        OUTPUT_NAME "DLL"
+        OUTPUT_NAME "dll2"
         PREFIX ""
         SUFFIX ".dll")
