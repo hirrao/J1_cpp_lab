@@ -1,5 +1,5 @@
 aux_source_directory(. MAIN)
 add_executable(${PROJECT_NAME}  ${MAIN})
 
-target_link_libraries(${PROJECT_NAME}  DLL)
-add_subdirectory(DLL)
+target_link_libraries(${PROJECT_NAME}  dll2)
+add_subdirectory(class2)
