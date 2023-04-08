@@ -1,6 +1,7 @@
 #include "main.h"
 #include "class.h"
 using namespace std;
+using PN::PrimeNumber;
 PrimeNumber::PrimeNumber(int num)
 {
     number=num;
@@ -19,11 +20,6 @@ PrimeNumber::PrimeNumber(int num)
 bool PrimeNumber::Is_PrimeNumber()
 {
     return is_pn;
-}
-
-std::ostream& operator<<(std::ostream &os,PrimeNumber &out) 
-{
-        return os << out.GetNumber() << endl ;
 }
 
 int PrimeNumber::GetNumber()
