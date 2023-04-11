@@ -1,6 +1,6 @@
-set(LibraryName dll2)
-aux_source_directory(. dll2)
-add_library(${LibraryName} SHARED ${dll2})
+set(LibraryName dll4)
+aux_source_directory(. dll4)
+add_library(${LibraryName} SHARED ${dll4})
 set_target_properties(${LibraryName} PROPERTIES
 
 LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/lib
