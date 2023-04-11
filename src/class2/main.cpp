@@ -21,8 +21,3 @@ bool PrimeNumber::Is_PrimeNumber()
 {
     return is_pn;
 }
-
-int PrimeNumber::GetNumber()
-{
-    return number;
-}

@@ -1,15 +1,16 @@
 #pragma once
 #include <iostream>
-namespace PN {
+namespace PN 
+{
     class PrimeNumber
     {
         public:
         bool Is_PrimeNumber();
-        int GetNumber();
         PrimeNumber(int num);
-        friend std::ostream& operator<<(std::ostream &os,PrimeNumber &out)
+        friend std::ostream& operator<<(std::ostream &os,const PrimeNumber &out)
         {
-            return os << out.GetNumber() << std::endl ;
+            os << out.number << std::endl ;
+            return os;
         }
         private:
         int number;
