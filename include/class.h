@@ -13,6 +13,10 @@ class FootBallTeam
         os << team.name << " " << team.tall << std::endl;
         return os;
     }
+    friend bool operator<(const FootBallTeam& team1, const FootBallTeam& team2)
+    {
+        return team1.tall<team2.tall;
+    }
     private:
     std::string name;
     int tall;
