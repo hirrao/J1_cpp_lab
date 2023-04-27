@@ -1,0 +1,6 @@
+/.vs
+/x64
+/.vscode
+/.cache
+*.user
+*.aps
