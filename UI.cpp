@@ -40,11 +40,11 @@ int choose(mouse_msg& msg)
 		}
 		else if (msg.y >= 320 && msg.y <= 440)
 		{
-			return CLOTH;
+			return SCISSORS;
 		}
 		else if (msg.y >= 480 && msg.y <= 600)
 		{
-			return SCISSORS;
+			return CLOTH;
 		}
 	}
 	else if (msg.x >= 1000 && msg.y >= 520)

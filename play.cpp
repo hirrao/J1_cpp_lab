@@ -24,4 +24,5 @@ void play(mouse_msg& msg)
 	{
 		lose();
 	}
+	return;
 }

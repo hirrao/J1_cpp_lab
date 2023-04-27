@@ -9,25 +9,6 @@ namespace CP
 		Player(int);
 		virtual int play();
 		int get_value();
-		friend std::ostream& operator<< (std::ostream& out, const Player& player)
-		{
-			switch (player.value)
-			{
-			case STONE:
-				out << "石头";
-				break;
-			case SCISSORS:
-				out << "剪刀";
-				break;
-			case CLOTH:
-				out << "布";
-				break;
-			default:
-				out << "UNDEFINED";
-				break;
-			}
-			return out;
-		};
 		friend bool operator < (const Player& A, const Player& B)
 		{
 			if (A.value == B.value)
