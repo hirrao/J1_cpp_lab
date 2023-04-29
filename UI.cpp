@@ -20,7 +20,7 @@ int open_msg(mouse_msg& msg)
 	{
 		if (msg.y <= 280 && msg.y >= 160)
 		{
-			return 0;
+			return INHERIT;
 		}
 		if (msg.y <= 480 && msg.y >= 360)
 		{
@@ -59,7 +59,7 @@ void result(Player P_value, Player Cp_value)
 	FRONT_OUTPUT_SET_NUMBER;
 	setfillcolor(EGERGB(216, 216, 32));
 	setbkcolor(EGERGB(216, 216, 32));
-	last_result += Cp_value.get_value();
+	last_result = Cp_value.get_value();
 	if (P_value == Cp_value)
 	{
 		bar(240, 280, 400, 360);
@@ -128,12 +128,18 @@ void Print_Computer_Value(Player& Computer_value)
 
 void Pattern_init()
 {
-	setfont(-60, 0, _T("微软雅黑"));
+	setfont(-50, 0, _T("微软雅黑"));
+	setbkcolor(EGERGB(40, 90, 156));
 	switch (type)
 	{
 	case RANDOM:
 	{
 		xyprintf(60, 480, "随机模式");
+		break;
+	}
+	case INHERIT:
+	{
+		xyprintf(60, 480, "继承模式");
 		break;
 	}
 	}

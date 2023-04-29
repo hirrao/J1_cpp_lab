@@ -37,5 +37,17 @@ int Random::play()
 
 int Inherit::play()
 {
-	return 0;
+	if (last_result / 10 == 3)
+	{
+		last_win_value = last_result % 10;
+	}
+	else
+	{
+		last_win_value = rand() % 3 + 1;
+	}
+	if(last_win_value == UNDEDINED_PLAY)
+		value = rand() % 3 + 1;
+	else
+		value = last_win_value;
+	return value;
 }

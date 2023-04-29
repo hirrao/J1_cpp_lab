@@ -56,7 +56,6 @@ namespace CP
 	{
 	public:
 		virtual int play();
-	private:
 		static int last_win_value;
 	};
 }
