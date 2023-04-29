@@ -54,44 +54,52 @@ int choose(mouse_msg& msg)
 	return 0;
 }
 
-void result(int P_value, int Cp_value)
+void result(Player P_value, Player Cp_value)
 {
 	FRONT_OUTPUT_SET_NUMBER;
 	setfillcolor(EGERGB(216, 216, 32));
 	setbkcolor(EGERGB(216, 216, 32));
-	bar(240, 280, 400, 360);
-	setfillcolor(EGERGB(48, 156, 40));
-	setbkcolor(EGERGB(48, 156, 40));
-	bar(880, 360, 1120, 440);
-	last_result += Cp_value;
+	last_result += Cp_value.get_value();
 	if (P_value == Cp_value)
 	{
+		bar(240, 280, 400, 360);
 		equip_value++;
 		string c = to_string(equip_value);
 		xyprintf(240, 290, c.c_str());
+		setfillcolor(EGERGB(48, 156, 40));
+		setbkcolor(EGERGB(48, 156, 40));
+		bar(880, 360, 1120, 440);
 		xyprintf(970, 370, "平局！");
 		last_result += 10;
 	}
 	else if (P_value > Cp_value)
 	{
+		bar(240, 40, 400, 120);
 		win_value++;
 		string c = to_string(win_value);
 		xyprintf(240, 50, c.c_str());
+		setfillcolor(EGERGB(48, 156, 40));
+		setbkcolor(EGERGB(48, 156, 40));
+		bar(880, 360, 1120, 440);
 		xyprintf(940, 370, "你赢了！");
 		last_result += 20;
 	}
 	else
 	{
+		bar(240, 160, 400, 240);
 		lose_value++;
 		string c = to_string(lose_value);
 		xyprintf(240, 170, c.c_str());
+		setfillcolor(EGERGB(48, 156, 40));
+		setbkcolor(EGERGB(48, 156, 40));
+		bar(880, 360, 1120, 440);
 		xyprintf(940, 370, "你输了！");
 		last_result += 30;
 	}
 	return;
 }
 
-void Print_Computer_Value(Computer_Player& Computer_value)
+void Print_Computer_Value(Player& Computer_value)
 {
 	setfont(-90, 0, _T("微软雅黑"));
 	setfillcolor(EGEACOLOR(255, EGERGB(156, 75, 40)));

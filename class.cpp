@@ -1,5 +1,7 @@
 #include "main.h"
 
+//Player相关函数
+
 int Player::get_value()
 {
 	return value;
@@ -21,8 +23,19 @@ int Player::play()
 	return value;
 }
 
+
+//Random相关函数
+
 int Random::play()
 {
 	value = rand() % 3 + 1;
 	return value;
+}
+
+
+//Inherit相关函数
+
+int Inherit::play()
+{
+	return 0;
 }

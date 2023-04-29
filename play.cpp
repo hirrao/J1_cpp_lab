@@ -2,7 +2,7 @@
 void play(mouse_msg& msg)
 {
 	Player Player_value = Player(choose(msg));
-	Computer_Player Computer_value;
+	Player Computer_value;
 	switch (type)
 	{
 	case RANDOM:
@@ -12,6 +12,6 @@ void play(mouse_msg& msg)
 		break;
 	}
 	Print_Computer_Value(Computer_value);
-	result(Player_value.get_value(), Computer_value.get_value());
+	result(Player_value, Computer_value);
 	return;
 }
