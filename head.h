@@ -17,3 +17,5 @@ enum Open_Type
 	UNDEDINED_OPEN,
 	RANDOM
 };
+
+extern int last_result;

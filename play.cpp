@@ -12,17 +12,6 @@ void play(mouse_msg& msg)
 		break;
 	}
 	Print_Computer_Value(Computer_value);
-	if (Player_value == Computer_value)
-	{
-		equip();
-	}
-	else if (Player_value > Computer_value)
-	{
-		win();
-	}
-	else
-	{
-		lose();
-	}
+	result(Player_value.get_value(), Computer_value.get_value());
 	return;
 }
