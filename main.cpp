@@ -3,6 +3,8 @@ int type = 0;
 int equip_value = 0;
 int win_value = 0;
 int lose_value = 0;
+int last_result = 0;
+int Inherit::last_win_value = 0;
 int main()
 {
 	srand(unsigned(time(NULL)));

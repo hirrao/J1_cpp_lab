@@ -45,14 +45,17 @@ namespace CP
 	protected:
 		int value;
 	};
-	class Computer_Player : public Player
-	{
 
-	};
-
-	class Random : public Computer_Player
+	class Random : public Player
 	{
 	public:
 		virtual int play();
+	};
+
+	class Inherit : public Player
+	{
+	public:
+		virtual int play();
+		static int last_win_value;
 	};
 }

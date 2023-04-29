@@ -15,5 +15,8 @@ enum Play_Type
 enum Open_Type
 {
 	UNDEDINED_OPEN,
-	RANDOM
+	RANDOM,
+	INHERIT
 };
+
+extern int last_result;
