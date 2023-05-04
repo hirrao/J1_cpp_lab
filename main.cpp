@@ -8,7 +8,6 @@ int Inherit::last_win_value = 0;
 int LeastUse::use[3] = {};
 int main()
 {
-	srand(unsigned(time(NULL)));
 	initgraph(1280, 640, INIT_RENDERMANUAL);
 	ege_enable_aa(true);
 	setcaption("Stone-Cloth-Scissors!");

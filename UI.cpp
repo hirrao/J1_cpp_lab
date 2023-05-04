@@ -56,7 +56,7 @@ int choose(mouse_msg& msg)
 
 void result(Player P_value, Player Cp_value)
 {
-	setfont(-50,0,_T("微软雅黑"));
+	setfont(-50, 0, _T("微软雅黑"));
 	setfillcolor(EGERGB(216, 216, 32));
 	setbkcolor(EGERGB(216, 216, 32));
 	last_result = Cp_value.get_value();

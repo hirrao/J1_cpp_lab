@@ -42,7 +42,7 @@ namespace CP
 			else
 				return false;
 		}
-		int random(int a,int b);
+		int random(int a, int b);
 	protected:
 		int value;
 	};
@@ -59,7 +59,7 @@ namespace CP
 		virtual int play();
 		static int last_win_value;
 	};
-	
+
 	class LeastUse : public Player
 	{
 	public:
