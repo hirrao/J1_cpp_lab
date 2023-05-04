@@ -8,17 +8,14 @@ YangHuiTriangle::YangHuiTriangle()
     Now_Line++;
 }
 
-long long C(long long n, long long k)
+long long Calculation(long long i, long long j) 
 {
-    return P(n, k) / P(k, k);
-}
-
-long long P(long long n, long long k)
-{
-    long long result = 1;
-    for (int i = 0; i < k; i++)
+    if (j == 0 || j == i)
     {
-        result *= (n - i);
+        return 1;
     }
-    return result;
+    else 
+    {
+        return Calculation(i - 1, j - 1) + Calculation(i - 1, j);
+    }
 }

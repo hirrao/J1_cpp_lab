@@ -1,8 +1,7 @@
 #include <iostream>
 extern int Sum_Line;
 extern int Now_Line;
-extern long long C(long long n, long long k);
-extern long long P(long long n, long long k);
+extern long long Calculation(long long i, long long j);
 namespace YangHui
 {
     class YangHuiTriangle
@@ -19,7 +18,7 @@ namespace YangHui
         }
         for(int j = 1; j <= Triangle.line; j++)
         {
-			os << C(Triangle.line - 1, j - 1) << " ";
+			os << Calculation(Triangle.line - 1, j - 1) << " ";
 		}
         for (int i = 0; i < Sum_Line - Triangle.line - 1 ; i++)
         {
