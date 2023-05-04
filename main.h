@@ -4,10 +4,11 @@
 #include <graphics.h>
 #include <Windows.h>
 #include <tchar.h>
-#define FRONT_OUTPUT_SET_NUMBER setfont(-60,0,_T("微软雅黑"))
+#include <random>
 using CP::Player;
 using CP::Random;
 using CP::Inherit;
+using CP::LeastUse;
 using namespace std;
 int open_msg(mouse_msg& msg);
 void play(mouse_msg& msg);

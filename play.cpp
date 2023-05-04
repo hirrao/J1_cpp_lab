@@ -19,6 +19,13 @@ void play(mouse_msg& msg)
 		Computer_value = v;
 		break;
 	}
+	case LEASTUSE:
+	{
+		LeastUse v;
+		v.play();
+		Computer_value = v;
+		break;
+	}
 	}
 	Print_Computer_Value(Computer_value);
 	result(Player_value, Computer_value);

@@ -16,7 +16,8 @@ enum Open_Type
 {
 	UNDEDINED_OPEN,
 	RANDOM,
-	INHERIT
+	INHERIT,
+	LEASTUSE
 };
 
 extern int last_result;

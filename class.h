@@ -42,6 +42,7 @@ namespace CP
 			else
 				return false;
 		}
+		int random(int a,int b);
 	protected:
 		int value;
 	};
@@ -57,5 +58,12 @@ namespace CP
 	public:
 		virtual int play();
 		static int last_win_value;
+	};
+	
+	class LeastUse : public Player
+	{
+	public:
+		virtual int play();
+		static int use[3];
 	};
 }

@@ -13,7 +13,7 @@ int open_msg(mouse_msg& msg)
 		}
 		if (msg.y <= 480 && msg.y >= 360)
 		{
-			return 0;
+			return LEASTUSE;
 		}
 	}
 	else if (msg.x >= 720)
@@ -56,7 +56,7 @@ int choose(mouse_msg& msg)
 
 void result(Player P_value, Player Cp_value)
 {
-	FRONT_OUTPUT_SET_NUMBER;
+	setfont(-50,0,_T("微软雅黑"));
 	setfillcolor(EGERGB(216, 216, 32));
 	setbkcolor(EGERGB(216, 216, 32));
 	last_result = Cp_value.get_value();
@@ -81,7 +81,7 @@ void result(Player P_value, Player Cp_value)
 		setfillcolor(EGERGB(48, 156, 40));
 		setbkcolor(EGERGB(48, 156, 40));
 		bar(880, 360, 1120, 440);
-		xyprintf(940, 370, "你赢了！");
+		xyprintf(950, 370, "你赢了！");
 		last_result += 20;
 	}
 	else
@@ -93,7 +93,7 @@ void result(Player P_value, Player Cp_value)
 		setfillcolor(EGERGB(48, 156, 40));
 		setbkcolor(EGERGB(48, 156, 40));
 		bar(880, 360, 1120, 440);
-		xyprintf(940, 370, "你输了！");
+		xyprintf(950, 370, "你输了！");
 		last_result += 30;
 	}
 	return;
@@ -139,7 +139,12 @@ void Pattern_init()
 	}
 	case INHERIT:
 	{
-		xyprintf(60, 480, "继承模式");
+		xyprintf(60, 480, "继承胜利");
+		break;
+	}
+	case LEASTUSE:
+	{
+		xyprintf(60, 480, "最少招数");
 		break;
 	}
 	}

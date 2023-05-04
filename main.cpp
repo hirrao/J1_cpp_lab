@@ -5,6 +5,7 @@ int win_value = 0;
 int lose_value = 0;
 int last_result = 0;
 int Inherit::last_win_value = 0;
+int LeastUse::use[3] = {};
 int main()
 {
 	srand(unsigned(time(NULL)));
