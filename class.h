@@ -42,7 +42,7 @@ namespace CP
 			else
 				return false;
 		}
-		int random(int a, int b);
+		inline int random(int a, int b);
 	protected:
 		int value;
 	};
@@ -65,5 +65,13 @@ namespace CP
 	public:
 		virtual int play();
 		static int use[3];
+	};
+
+	class MostWin : public Player
+	{
+	public:
+		virtual int play();
+		static int Frequency[6];
+		inline double Proportion(int a);
 	};
 }

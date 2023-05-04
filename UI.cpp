@@ -24,7 +24,7 @@ int open_msg(mouse_msg& msg)
 		}
 		if (msg.y <= 480 && msg.y >= 360)
 		{
-			return 0;
+			return MOSTWIN;
 		}
 	}
 	return 0;
@@ -63,8 +63,8 @@ void result(Player P_value, Player Cp_value)
 	if (P_value == Cp_value)
 	{
 		bar(240, 280, 400, 360);
-		equip_value++;
-		string c = to_string(equip_value);
+		value[0]++;
+		string c = to_string(value[0]);
 		xyprintf(240, 290, c.c_str());
 		setfillcolor(EGERGB(48, 156, 40));
 		setbkcolor(EGERGB(48, 156, 40));
@@ -75,8 +75,8 @@ void result(Player P_value, Player Cp_value)
 	else if (P_value > Cp_value)
 	{
 		bar(240, 40, 400, 120);
-		win_value++;
-		string c = to_string(win_value);
+		value[1]++;
+		string c = to_string(value[1]);
 		xyprintf(240, 50, c.c_str());
 		setfillcolor(EGERGB(48, 156, 40));
 		setbkcolor(EGERGB(48, 156, 40));
@@ -87,8 +87,8 @@ void result(Player P_value, Player Cp_value)
 	else
 	{
 		bar(240, 160, 400, 240);
-		lose_value++;
-		string c = to_string(lose_value);
+		value[2]++;
+		string c = to_string(value[2]);
 		xyprintf(240, 170, c.c_str());
 		setfillcolor(EGERGB(48, 156, 40));
 		setbkcolor(EGERGB(48, 156, 40));
@@ -145,6 +145,11 @@ void Pattern_init()
 	case LEASTUSE:
 	{
 		xyprintf(60, 480, "最少招数");
+		break;
+	}
+	case MOSTWIN:
+	{
+		xyprintf(60, 480, "最多胜利");
 		break;
 	}
 	}

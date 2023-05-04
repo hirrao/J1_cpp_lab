@@ -17,7 +17,8 @@ enum Open_Type
 	UNDEDINED_OPEN,
 	RANDOM,
 	INHERIT,
-	LEASTUSE
+	LEASTUSE,
+	MOSTWIN
 };
 
 extern int last_result;

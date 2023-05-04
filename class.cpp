@@ -85,22 +85,71 @@ int LeastUse::play()
 		{
 			value = random(2, 3);
 		}
+		else if (use[0] < use[1] && use[0] < use[2])
+		{
+			value = 1;
+		}
+		else if (use[1] < use[0] && use[1] < use[2])
+		{
+			value = 2;
+		}
 		else
 		{
-			if (use[0] < use[1] && use[0] < use[2])
-			{
-				value = 1;
-			}
-			else if (use[1] < use[0] && use[1] < use[2])
-			{
-				value = 2;
-			}
-			else
-			{
-				value = 3;
-			}
+			value = 3;
 		}
 	}
 	use[value - 1]++;
 	return value;
+}
+
+//MostWin相关函数
+
+int MostWin::play()
+{
+	if (last_result != 0)
+	{
+		Frequency[(last_result % 10) - 1]++;
+	}
+	if (last_result / 10 == 3)
+	{
+		Frequency[last_result % 10 + 2]++;
+	}
+	if (Frequency[0] < 2 || Frequency[1] < 2 || Frequency[2] < 2 || Frequency[3] < 1 || Frequency[4] < 1 || Frequency[5] < 1)
+	{
+		value = random(1, 3);
+	}
+	else if (Proportion(0) == Proportion(1) && Proportion(0) == Proportion(2) && Proportion(1) == Proportion(2))
+	{
+		value = random(1, 3);
+	}
+	else if (Proportion(0) == Proportion(1) && Proportion(0) > Proportion(2))
+	{
+		value = random(1, 2);
+	}
+	else if (Proportion(0) == Proportion(2) && Proportion(0) > Proportion(1))
+	{
+		value = (2 * random(0, 1)) + 1;
+	}
+	else if (Proportion(1) == Proportion(2) && Proportion(1) > Proportion(0))
+	{
+		value = random(2, 3);
+	}
+	else if (Proportion(0) > Proportion(1) && Proportion(0) > Proportion(2))
+	{
+		value = 1;
+	}
+	else if (Proportion(1) > Proportion(0) && Proportion(1) > Proportion(2))
+	{
+		value = 2;
+	}
+	else
+	{
+		value = 3;
+	}
+	return value;
+}
+
+double MostWin::Proportion(int a)
+{
+	return double(Frequency[a + 3]) / Frequency[a];
 }
