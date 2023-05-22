@@ -5,8 +5,7 @@ int last_result = 0;
 int Inherit::last_win_value = 0;
 int LeastUse::use[3] = {};
 int MostWin::Frequency[6] = {};
-int main()
-{
+int main() {
 	initgraph(1280, 640, INIT_RENDERMANUAL);
 	ege_enable_aa(true);
 	setcaption("Stone-Cloth-Scissors!");
@@ -17,13 +16,12 @@ int main()
 	putimage(0, 0, open_image);
 	delimage(open_image);
 
-	for (;is_run();delay_fps(120))
-	{
+	for (;is_run();delay_fps(120)) {
 		mouse_msg msg = getmouse();
-		if (msg.is_down())
-		{
+		if (msg.is_down()) {
 			type = open_msg(msg);
-			break;
+			if (type != 0)
+				break;
 		}
 	}
 
@@ -33,8 +31,7 @@ int main()
 	delimage(play_image);
 
 	Pattern_init();
-	for (;is_run();delay_fps(120))
-	{
+	for (;is_run();delay_fps(120)) {
 		mouse_msg msg = getmouse();
 		if (msg.is_down())
 		{

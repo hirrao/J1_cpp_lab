@@ -1,33 +1,27 @@
 ﻿#include "main.h"
-void play(mouse_msg& msg)
-{
+void play(mouse_msg& msg) {
 	Player Player_value = Player(choose(msg));
 	Player Computer_value;
-	switch (type)
-	{
-	case RANDOM:
-	{
+	switch (type) {
+	case RANDOM: {
 		Random v;
 		v.play();
 		Computer_value = v;
 		break;
 	}
-	case INHERIT:
-	{
+	case INHERIT: {
 		Inherit v;
 		v.play();
 		Computer_value = v;
 		break;
 	}
-	case LEASTUSE:
-	{
+	case LEASTUSE: {
 		LeastUse v;
 		v.play();
 		Computer_value = v;
 		break;
 	}
-	case MOSTWIN:
-	{
+	case MOSTWIN: {
 		MostWin v;
 		v.play();
 		Computer_value = v;

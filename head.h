@@ -4,16 +4,14 @@
 #include <iostream>
 #include <ctime>
 #include <string>
-enum Play_Type
-{
+enum Play_Type {
 	UNDEDINED_PLAY,
 	STONE,
 	SCISSORS,
 	CLOTH,
 };
 
-enum Open_Type
-{
+enum Open_Type {
 	UNDEDINED_OPEN,
 	RANDOM,
 	INHERIT,

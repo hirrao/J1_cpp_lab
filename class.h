@@ -1,16 +1,13 @@
 ﻿#pragma once
 #include "head.h"
-namespace CP
-{
-	class Player
-	{
+namespace CP {
+	class Player {
 	public:
 		Player();
 		Player(int);
 		virtual int play();
 		int get_value();
-		friend bool operator < (const Player& A, const Player& B)
-		{
+		friend bool operator < (const Player& A, const Player& B) {
 			if (A.value == B.value)
 				return false;
 			else if (A.value == STONE && B.value == SCISSORS)
@@ -22,8 +19,7 @@ namespace CP
 			else
 				return true;
 		};
-		friend bool operator > (const Player& A, const Player& B)
-		{
+		friend bool operator > (const Player& A, const Player& B) {
 			if (A.value == B.value)
 				return false;
 			else if (A.value == STONE && B.value == SCISSORS)
@@ -35,8 +31,7 @@ namespace CP
 			else
 				return false;
 		}
-		friend bool operator == (const Player& A, const Player& B)
-		{
+		friend bool operator == (const Player& A, const Player& B) {
 			if (A.value == B.value)
 				return true;
 			else
@@ -47,28 +42,24 @@ namespace CP
 		int value;
 	};
 
-	class Random : public Player
-	{
+	class Random : public Player {
 	public:
 		virtual int play();
 	};
 
-	class Inherit : public Player
-	{
+	class Inherit : public Player {
 	public:
 		virtual int play();
 		static int last_win_value;
 	};
 
-	class LeastUse : public Player
-	{
+	class LeastUse : public Player {
 	public:
 		virtual int play();
 		static int use[3];
 	};
 
-	class MostWin : public Player
-	{
+	class MostWin : public Player {
 	public:
 		virtual int play();
 		static int Frequency[6];
