@@ -1,6 +1,8 @@
 ﻿#include "main.h"
 void play(mouse_msg& msg) {
 	Player Player_value = Player(choose(msg));
+	if (Player_value == 0)
+		return;
 	Player Computer_value;
 	switch (type) {
 	case RANDOM: {
