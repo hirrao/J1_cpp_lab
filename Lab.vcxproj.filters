@@ -47,4 +47,12 @@
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="OPEN.png">
+      <Filter>资源文件</Filter>
+    </Image>
+    <Image Include="PLAY.png">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

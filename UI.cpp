@@ -1,4 +1,5 @@
 ﻿#include "main.h"
+//判断选择的模式
 int open_msg(mouse_msg& msg) {
 	if (msg.x >= 480 && msg.x <= 800 && msg.y >= 520 && msg.y <= 600)
 		exit(1);
@@ -16,7 +17,7 @@ int open_msg(mouse_msg& msg) {
 	}
 	return 0;
 }
-
+//判断玩家的选择
 int choose(mouse_msg& msg) {
 	if (msg.x >= 480 && msg.x <= 720) {
 		if (msg.y >= 160 && msg.y <= 280)
@@ -30,7 +31,7 @@ int choose(mouse_msg& msg) {
 		exit(1);
 	return 0;
 }
-
+//打印结果到屏幕上
 void result(Player P_value, Player Cp_value) {
 	setfont(-50, 0, _T("微软雅黑"));
 	setfillcolor(EGERGB(216, 216, 32));
@@ -71,7 +72,7 @@ void result(Player P_value, Player Cp_value) {
 	}
 	return;
 }
-
+//打印电脑的出招到屏幕上
 void Print_Computer_Value(Player& Computer_value) {
 	setfont(-90, 0, _T("微软雅黑"));
 	setfillcolor(EGEACOLOR(255, EGERGB(156, 75, 40)));
@@ -93,7 +94,7 @@ void Print_Computer_Value(Player& Computer_value) {
 	}
 	return;
 }
-
+//打印模式到屏幕左下角
 void Pattern_init() {
 	setfont(-50, 0, _T("微软雅黑"));
 	setbkcolor(EGERGB(40, 90, 156));

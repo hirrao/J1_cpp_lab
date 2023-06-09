@@ -1,6 +1,7 @@
 ﻿#pragma once
 #include "head.h"
 namespace CP {
+	//基类的定义，实现运算符重载
 	class Player {
 	public:
 		Player();
@@ -42,6 +43,7 @@ namespace CP {
 		int value;
 	};
 
+	//分别实现四个不同模式的类
 	class Random : public Player {
 	public:
 		virtual int play();

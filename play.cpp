@@ -1,4 +1,5 @@
 ﻿#include "main.h"
+//具体对电脑的出招进行计算，并返回结果
 void play(mouse_msg& msg) {
 	Player Player_value = Player(choose(msg));
 	if (Player_value == 0)
